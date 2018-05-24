@@ -14,6 +14,7 @@ class AnnotatedSl4jServiceSpec extends Specification {
     }
 
     def cleanup() {
+        TestLoggerFactory.clear()
     }
 
     void "verify logging with sl4j-test"() {

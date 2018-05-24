@@ -12,6 +12,7 @@ class AgeServiceSpec extends Specification implements ServiceUnitTest<AgeService
     }
 
     def cleanup() {
+        TestLoggerFactory.clear()
     }
 
     void "test service prints to console"() {
