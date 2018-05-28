@@ -10,9 +10,6 @@ import uk.org.lidalia.slf4jtest.TestLoggerFactory
 
 class AgeServiceSpec extends Specification implements ServiceUnitTest<AgeService> {
 
-    def setup() {
-    }
-
     def cleanup() {
         TestLoggerFactory.clear()
     }
