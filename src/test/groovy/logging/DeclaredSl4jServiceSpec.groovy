@@ -1,17 +1,14 @@
 package logging
 
 import com.google.common.collect.ImmutableList
+import grails.testing.services.ServiceUnitTest
 import spock.lang.Specification
+import uk.org.lidalia.slf4jext.Level
 import uk.org.lidalia.slf4jtest.LoggingEvent
 import uk.org.lidalia.slf4jtest.TestLogger
 import uk.org.lidalia.slf4jtest.TestLoggerFactory
 
-class DeclaredSl4jServiceSpec extends Specification {
-
-    DeclaredSl4jService declaredSl4jService = new DeclaredSl4jService()
-
-    def setup() {
-    }
+class DeclaredSl4jServiceSpec extends Specification implements ServiceUnitTest<DeclaredSl4jService> {
 
     def cleanup() {
         TestLoggerFactory.clear()
@@ -21,13 +18,13 @@ class DeclaredSl4jServiceSpec extends Specification {
         when:
         TestLogger logger = TestLoggerFactory.getTestLogger("logging.DeclaredSl4jService")
 
-        declaredSl4jService.logSomething()
+        service.logSomething()
 
         ImmutableList<LoggingEvent> loggingEvents = logger.getLoggingEvents()
 
         then:
         loggingEvents.size() == 1
         loggingEvents[0].message == "Carpe Diem"
-        loggingEvents[0].level == uk.org.lidalia.slf4jext.Level.INFO
+        loggingEvents[0].level == Level.INFO
     }
 }
