@@ -3,10 +3,10 @@ package logging
 import groovy.util.logging.Slf4j
 
 /**
- * Non grails groovy class with a annotation for Sl4j
+ * Non grails groovy class with a annotation for Slf4j
  */
 @Slf4j
-class AnnotatedSl4jService {
+class AnnotatedSlf4jService {
 
     void logSomething() {
         println "*********** log in the class ******" + log.dump()

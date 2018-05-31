@@ -8,15 +8,15 @@ import uk.org.lidalia.slf4jtest.LoggingEvent
 import uk.org.lidalia.slf4jtest.TestLogger
 import uk.org.lidalia.slf4jtest.TestLoggerFactory
 
-class DeclaredSl4jServiceSpec extends Specification implements ServiceUnitTest<DeclaredSl4jService> {
+class DeclaredSlf4jServiceSpec extends Specification implements ServiceUnitTest<DeclaredSlf4jService> {
 
     def cleanup() {
         TestLoggerFactory.clear()
     }
 
-    void "verify logging with sl4j-test"() {
+    void "verify logging with slf4j-test"() {
         when:
-        TestLogger logger = TestLoggerFactory.getTestLogger("logging.DeclaredSl4jService")
+        TestLogger logger = TestLoggerFactory.getTestLogger("logging.DeclaredSlf4jService")
 
         service.logSomething()
 

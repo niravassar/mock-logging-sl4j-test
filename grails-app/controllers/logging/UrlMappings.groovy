@@ -1,4 +1,4 @@
-package mock.logging.sl4j.test
+package logging
 
 class UrlMappings {
 

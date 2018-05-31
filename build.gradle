@@ -11,7 +11,7 @@ buildscript {
 }
 
 version "0.1"
-group "mock.logging.sl4j.test"
+group "mock.logging.slf4j.test"
 
 apply plugin:"eclipse"
 apply plugin:"idea"

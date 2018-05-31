@@ -22,7 +22,7 @@ class AgeServiceSpec extends Specification implements ServiceUnitTest<AgeService
         1 == 1
     }
 
-    void "verify logging with sl4j-test"() {
+    void "verify logging with slf4j-test"() {
         when:
         TestLogger logger = TestLoggerFactory.getTestLogger("logging.AgeService")
 

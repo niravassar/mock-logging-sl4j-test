@@ -1,1 +1,1 @@
-# mock-logging-sl4j-test
+# mock-logging-slf4j-test
