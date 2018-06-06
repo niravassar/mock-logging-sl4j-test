@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory
  */
 class DeclaredSlf4jService {
 
-    private static Logger log = LoggerFactory.getLogger(DeclaredSlf4jService.class)
+    private static Logger log = LoggerFactory.getLogger(DeclaredSlf4jService)
 
     void logSomething() {
         println "*********** log in the class ******" + log.dump()
